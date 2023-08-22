@@ -26,7 +26,8 @@ export interface Blog {
 }
 
 export interface BlogWithAuthor extends Blog {
-    authorname: Author['name'];
+    authorname: Author["name"];
     email: Author["email"];
 }
+
 

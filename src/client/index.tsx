@@ -1,8 +1,9 @@
 import * as React from 'react';
-import { render } from 'react-dom'
+import { createRoot } from 'react-dom/client';
 import App from './App';
 import './scss/app.scss';
 
 document.body.classList.add('bg-dark');
 
-render(<App />, document.getElementById('root'));
+const root = createRoot(document.getElementById('root') as HTMLElement);
+root.render(<App />);
