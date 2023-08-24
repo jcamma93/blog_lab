@@ -56,7 +56,7 @@ blogsRouter.post('/', async (req, res) => {
 
     if (!title || !content ) return res.status(400).json({ message: "All fields must contain valid inputs"})
     
-    const newBlog: Blog = { title, content, authorid: 1 };
+    const newBlog: Blog = { title, content, author_id: 1 };
 
     try{
         const blog = await Blogs.create(newBlog)
@@ -75,7 +75,7 @@ blogsRouter.put('/:id', async (req, res) => {
 
     if (!title || !content ) return res.status(400).json({ message: "All fields must contain valid inputs"})
     
-    const updatedBlog: Blog = { title, content, authorid: 1 };
+    const updatedBlog: Blog = { title, content, author_id: 1 };
 
     try{
         const blog = await Blogs.update(updatedBlog, id); 

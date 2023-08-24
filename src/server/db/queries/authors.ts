@@ -9,8 +9,8 @@ const update = (editedAuthor: Author, id:Author['id']) => Query('UPDATE Authors 
 const destroy = (id: Author['id']) => Query('DELETE FROM Authors WHERE');
 
 export default {
-    getAll,
-    getOne,
+    all: getAll,
+    find: getOne,
     create,
     update,
     destroy

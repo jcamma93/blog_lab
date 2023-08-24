@@ -5,5 +5,5 @@ import './scss/app.scss';
 
 document.body.classList.add('bg-dark');
 
-const root = createRoot(document.getElementById('root') as HTMLElement);
+const root = createRoot(document.getElementById('root')!);
 root.render(<App />);
