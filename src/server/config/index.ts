@@ -15,3 +15,4 @@ export const mailConfig = {
     domain: process.env.MAILGUN_DOMAIN,
     api_key: process.env.MAILGUN_API_KEY
 };
+
