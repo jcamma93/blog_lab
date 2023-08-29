@@ -3,6 +3,7 @@ import * as Mailgun from 'mailgun.js';
 import * as FormData from 'form-data';
 import MailGun from 'mailgun.js';
 import { mailConfig } from '../../config';
+import sms from '../../services/sms';
 
 
 const mailgun = new (<typeof MailGun>(<any>Mailgun))(<any>FormData).client({
@@ -12,6 +13,15 @@ const mailgun = new (<typeof MailGun>(<any>Mailgun))(<any>FormData).client({
 
 
 const router = express.Router();
+
+router.post('/sms', async (req, res) => {
+    try {
+        await sms. sendMeAText("This is a text sent using Trilio!!")
+        res.json({ message: "Awesome!  Check your inbox!"})
+    } catch (error) {
+        res.status(500).json({ message: "Unable to send text message at this time"})
+    }
+})
 
 router.post('/', async (req, res) => {
     const newEmail = req.body;

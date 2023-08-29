@@ -16,3 +16,9 @@ export const mailConfig = {
     api_key: process.env.MAILGUN_API_KEY
 };
 
+
+export const twilioConfig = {
+    number: process.env.TWILIO_NUM,
+    sid: process.env.TWILIO_SID,
+    token: process.env.TWILIO_TOKEN
+}

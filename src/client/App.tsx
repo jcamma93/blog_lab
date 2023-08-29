@@ -6,6 +6,7 @@ import Create from './views/create'
 import Edit from './views/Edit';
 import SingleBlog from './views/SingleBlog';
 import Contact from './views/contact';
+// import Donate from './components/Donate';
 
 const App = () => {
 	return (
@@ -13,14 +14,16 @@ const App = () => {
 		<Navbar />
 			<main className ="container my-5">
 			<Routes>
+				<Route path="/" element={<h1 className='text-center text-secondary'>HOME</h1>} />
+
+				{/* <Route path="/donate" element={<Donate />} /> */}
 				<Route path="/contact" element={<Contact />} />
-				
 				<Route path="/create" element={<Create />} />
 				<Route path="/blogs" element={<Blogs />} />
 				<Route path="/blogs/:id" element={<SingleBlog />} />
 				<Route path="/blogs/:id/edit" element={<Edit />} />
 			</Routes>
-			</main>
+			</main> 
 		</BrowserRouter>
 	)
 };
