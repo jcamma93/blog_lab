@@ -14,3 +14,9 @@ export const Query = <T = mysql.OkPacket>(string: string, values: unknown[] = []
         });
     });
 };
+
+import users from "./queries/users";
+
+export default {
+    users
+}
