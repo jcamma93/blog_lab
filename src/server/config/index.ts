@@ -22,3 +22,16 @@ export const twilioConfig = {
     sid: process.env.TWILIO_SID,
     token: process.env.TWILIO_TOKEN
 }
+
+export default {
+    db: {
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASS,
+        database: process.env.DB_SCHEMA
+    },
+    jwt: {
+        secret: process.env.JWT_SECRET,
+        expires: process.env.JWT_EXPIRES
+    }
+}

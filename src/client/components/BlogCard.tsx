@@ -13,12 +13,12 @@ const BlogCard = ({ blog, isSingle }: BlogCardProps) => {
 
     return (
         <div onClick={handleNavigate} className={'col-12 col-md-5'}>
-            <div className='card m-2 bg-primary'>
+            <div className='card m-2 bg-light'>
                 <div className="card-title">{blog?.title}</div>
                 <div className="card-body">{blog?.content}</div>
                 <div className="card-footer">@{blog?.authorname}</div>
                 {isSingle && (
-                    <button onClick={() => nav(`/blogs/${blog.id}/edit`)} className='btn btn-warning'>
+                    <button onClick={() => nav(`/blogs/${blog.id}/edit`)} className='btn btn-secondary'>
                         Edit
                     </button>
                 )}

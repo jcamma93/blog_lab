@@ -1,3 +1,19 @@
+import { Request } from 'express';
+import { UsersTable } from '../server/db/models';
+
+
+// auth interfaces
+export interface ReqUser extends Request {
+    user: UsersTable | Payload;
+}
+
+export interface Payload extends UsersTable {
+    userid?: number;
+    role?: number;
+}
+
+
+// blog interfaces
 export interface Author {
     id?: number;
     name: string;
@@ -29,5 +45,4 @@ export interface BlogWithAuthor extends Blog {
     authorname: Author["name"];
     email: Author["email"];
 }
-
 

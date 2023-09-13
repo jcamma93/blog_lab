@@ -29,7 +29,7 @@ const Blogs = () => {
 
     return (
         <div className='row justify-content-center'>
-            <h1 className='text-center text-secondary'>Blogs</h1>
+            <h1 className='text-center text-secondary'>~Blogs~</h1>
             {blogs.map(b => (
                 <BlogCard blog={b} key={`blog-card-${b.id}`} />
             ))}

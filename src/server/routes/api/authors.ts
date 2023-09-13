@@ -1,6 +1,6 @@
 import * as express from 'express';
-import Authors from '../db/queries/authors';
-import { Author } from '../../types';
+import Authors from '../../db/queries/authors';
+import { Author } from '../../../types';
 
 
 const authorsRouter = express.Router(); 

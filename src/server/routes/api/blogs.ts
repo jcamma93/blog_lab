@@ -1,6 +1,6 @@
 import * as express from 'express';
-import Blogs from '../db/queries/blogs';
-import { Blog } from '../../types';
+import Blogs from '../../db/queries/blogs';
+import { Blog } from '../../../types';
 
 
 const blogsRouter = express.Router();
