@@ -15,7 +15,15 @@ const BlogCard = ({ blog, isSingle }: BlogCardProps) => {
         <div onClick={handleNavigate} className={'col-12 col-md-5'}>
             <div className='card m-2 bg-light'>
                 <div className="card-title">{blog?.title}</div>
-                <div className="card-body">{blog?.content}</div>
+                <div className="card-body">{blog?.content.split('\n').map((p, idx) => {
+                    return (
+                        <React.Fragment key={`p-${idx}`}>
+                            <p>{p}</p>
+                            <br />
+                        </React.Fragment>
+                    );
+                })}
+                </div>
                 <div className="card-footer">@{blog?.authorname}</div>
                 {isSingle && (
                     <button onClick={() => nav(`/blogs/${blog.id}/edit`)} className='btn btn-secondary'>
