@@ -22,11 +22,12 @@ const Login = (props: LoginProps) => {
         <main className='container'>
             <section className='row justify-content-center'>
                 <div className='col-12 col-md-4'>
+                    <h1 className='text-center text-light'>Login</h1>
                     <form className='form-group border rounded shadow p-4'>
-                        <label htmlFor="email">Email</label>
+                        <label className='text-light' htmlFor="email">Email</label>
                         <input type='email' autoComplete='email' className='form-control mb-2' value={email} onChange={e => setEmail(e.target.value)} />
 
-                        <label htmlFor="password">Password</label>
+                        <label className='text-light' htmlFor="password">Password</label>
                         <input type='password' autoComplete='current-password' className='form-control mb-2' value={password} onChange={e => setPassword(e.target.value)} />
 
                         <button onClick={handleLogin} className='btn btn-primary'>Login</button>

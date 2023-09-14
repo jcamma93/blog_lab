@@ -18,9 +18,9 @@ const Contact = () => {
     }
     return (
         <main className='container my-5'>
-
             <section className='row justify-content-center'>
                 <div className="col md-6">
+                    <h1 className='text-center text-light'>Contact</h1>
                     <form className='form-group p-3 border rounded shadow'>
                         <input placeholder='Email' value={from} onChange={e => setFrom(e.target.value)} className='form-control mb-3' />
                         <input placeholder='Subject' value={subject} onChange={e => setSubject(e.target.value)} className='form-control mb-3' />

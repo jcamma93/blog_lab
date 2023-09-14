@@ -1,10 +1,10 @@
 // First override some or all individual color variables
 $primary: #2b49a3;
 $secondary: #e014a3;
-$success: #f73c55;
+$success: #1edd2e;
 $info: #13101c;
 $warning: #c5a22d;
-$danger: #da1818;
+$danger: #ff1010;
 $light: #a9acad;
 $dark: #2a2f33;
 
@@ -20,5 +20,6 @@ $theme-colors: (
 	dark: $dark,
 	// add any additional color below
 );
+
 
 @import '../../../node_modules/bootstrap/scss/bootstrap.scss';

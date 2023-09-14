@@ -1,5 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import PrivateRoute from './components/PrivateRoute';
+
 import Navbar from './components/Navbar';
 import Blogs from './views/Blogs';
 import Create from './views/create'
@@ -22,9 +24,10 @@ const App = () => {
 				<Route path="/contact" element={<Contact />} />
 				<Route path="/create" element={<Create />} />
 				<Route path="/blogs" element={<Blogs />} />
-				<Route path="/blogs/:id" element={<SingleBlog />} />
+				<Route path="/blogs/:id" element={<PrivateRoute><SingleBlog /></PrivateRoute>} />
 				<Route path="/blogs/:id/edit" element={<Edit />} />
-				<Route path="/pizza" element={<Pizza />} />
+				<Route path="/pizza" element={<PrivateRoute><Pizza /></PrivateRoute>} />
+				<Route path='/login' element={<Login />} />
 				<Route path='*' element={<h1>404 An error occured</h1>} />
 			</Routes>
 			</main> 
