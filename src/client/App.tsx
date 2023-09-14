@@ -10,6 +10,7 @@ import SingleBlog from './views/SingleBlog';
 import Contact from './views/contact';
 import Login from './views/Login';
 import Pizza from './views/Pizza';
+import Register from './views/Register';
 // import Donate from './components/Donate';
 
 const App = () => {
@@ -28,6 +29,7 @@ const App = () => {
 				<Route path="/blogs/:id/edit" element={<Edit />} />
 				<Route path="/pizza" element={<PrivateRoute><Pizza /></PrivateRoute>} />
 				<Route path='/login' element={<Login />} />
+				<Route path='/register' element={<Register />} />
 				<Route path='*' element={<h1>404 An error occured</h1>} />
 			</Routes>
 			</main> 

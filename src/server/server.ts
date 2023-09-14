@@ -1,6 +1,6 @@
 import * as express from 'express';
 import * as path from 'path';
-import routes from './routes'
+import routes from './routes';
 import { configurePassport } from './middlewares/passport-strategies.mw';
 
 

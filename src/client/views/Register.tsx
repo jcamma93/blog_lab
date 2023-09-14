@@ -1,16 +1,16 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { apiService, TOKEN_KEY } from '../services/api-service';
 
-const Login = (props: LoginProps) => {
+const Register = (props: RegisterProps) => {
     const navigate = useNavigate();
     const [email, setEmail] = useState<string>('');
     const [password, setPassword] = useState<string>('');
 
-    const handleLogin = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleRegister = (e: React.MouseEvent<HTMLButtonElement>) => {
         e.preventDefault();
-        apiService('/auth/login', 'POST', { email, password })
+        apiService('/auth/register', 'POST', { email, password })
             .then(token => {
                 localStorage.setItem(TOKEN_KEY, token);
                 navigate('/pizza');
@@ -22,7 +22,7 @@ const Login = (props: LoginProps) => {
         <main className='container'>
             <section className='row justify-content-center'>
                 <div className='col-12 col-md-4'>
-                    <h1 className='text-center text-light'>Login</h1>
+                    <h1 className='text-center text-light'>Register</h1>
                     <form className='form-group border rounded shadow p-4'>
                         <label className='text-light' htmlFor="email">Email</label>
                         <input type='email' autoComplete='email' className='form-control mb-2' value={email} onChange={e => setEmail(e.target.value)} />
@@ -30,10 +30,7 @@ const Login = (props: LoginProps) => {
                         <label className='text-light' htmlFor="password">Password</label>
                         <input type='password' autoComplete='current-password' className='form-control mb-2' value={password} onChange={e => setPassword(e.target.value)} />
 
-                        <button onClick={handleLogin} className='btn btn-primary'>Login</button>
-                        <br /> <br />
-                        <p className='text-light'>Not a member? No problem!</p>
-                        <Link to={'/register'} className='text-light justify-content-center'>Click here to sign up!</Link>
+                        <button onClick={handleRegister} className='btn btn-primary'>Register</button>
                     </form>
                 </div>
             </section>
@@ -41,6 +38,6 @@ const Login = (props: LoginProps) => {
     );
 };
 
-interface LoginProps { }
+interface RegisterProps { }
 
-export default Login;
+export default Register;

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import DropDown from '../components/DropDown';
 
 const Create = () => {
     const [title, setTitle] = useState("");
@@ -34,7 +35,8 @@ const Create = () => {
                     <input value={title} onChange={e => setTitle(e.target.value)} type="text" className="form-control" />
                     <label className='text-info'>Blog Content</label>
                     <textarea value={content} onChange={e => setContent(e.target.value)} className="form-control" />
-                    <button disabled={!title || !content} onClick={handleSubmit} className="btn btn-secondary m-2">
+                    <DropDown />
+                    <button disabled={!title || !content} onClick={handleSubmit} className="btn btn-dark m-2">
                         Add Blog
                     </button>
                 </form>
